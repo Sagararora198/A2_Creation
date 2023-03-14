@@ -47,19 +47,78 @@ class noonscraper(scrapy.Spider):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#
+#
+#
+#
+#
+#
+#
+#
+# from scrapy.spiders import XMLFeedSpider
+# from myproject.items import TestItem
+#
+# class MySpider(XMLFeedSpider):
+#     name = 'example.com'
+#     allowed_domains = ['example.com']
+#     start_urls = ['http://www.example.com/feed.xml']
+#     iterator = 'iternodes'  # This is actually unnecessary, since it's the default value
+#     itertag = 'item'
+#
+#     def parse_node(self, response, node):
+#         self.logger.info('Hi, this is a <%s> node!: %s', self.itertag, ''.join(node.getall()))
+#
+#         item = TestItem()
+#         item['id'] = node.xpath('@id').get()
+#         item['name'] = node.xpath('name').get()
+#         item['description'] = node.xpath('description').get()
+#         return item
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# from scrapy.spiders import CSVFeedSpider
+# from myproject.items import TestItem
+#
+# class MySpider(CSVFeedSpider):
+#     name = 'example.com'
+#     allowed_domains = ['example.com']
+#     start_urls = ['http://www.example.com/feed.csv']
+#     delimiter = ';'
+#     quotechar = "'"
+#     headers = ['id', 'name', 'description']
+#
+#     def parse_row(self, response, row):
+#         self.logger.info('Hi, this is a row!: %r', row)
+#
+#         item = TestItem()
+#         item['id'] = row['id']
+#         item['name'] = row['name']
+#         item['description'] = row['description']
+#         return item
+#
+#
+#

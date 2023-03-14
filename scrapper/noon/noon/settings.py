@@ -54,6 +54,41 @@ ROBOTSTXT_OBEY = True
 #    "noon.middlewares.NoonDownloaderMiddleware": 543,
 #}
 
+
+# user agent rotating
+# DOWNLOADER_MIDDLEWARES.update({
+#     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+#     'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware': 500,
+# })
+#
+# USER_AGENTS = [
+#     ('Mozilla/5.0 (X11; Linux x86_64) '
+#      'AppleWebKit/537.36 (KHTML, like Gecko) '
+#      'Chrome/57.0.2987.110 '
+#      'Safari/537.36'),  # chrome
+#     ('Mozilla/5.0 (X11; Linux x86_64) '
+#      'AppleWebKit/537.36 (KHTML, like Gecko) '
+#      'Chrome/61.0.3163.79 '
+#      'Safari/537.36'),  # chrome
+#     ('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) '
+#      'Gecko/20100101 '
+#      'Firefox/55.0')  # firefox
+# ]
+
+# user agent rotating using library
+# DOWNLOADER_MIDDLEWARES = {
+#     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+#     'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400,
+# }
+# PROXY_POOL_ENABLED = True
+#
+# DOWNLOADER_MIDDLEWARES = {
+#     # ...
+#     'scrapy_proxy_pool.middlewares.ProxyPoolMiddleware': 610,
+#     'scrapy_proxy_pool.middlewares.BanDetectionMiddleware': 620,
+#     # ...
+# }
+
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
@@ -62,9 +97,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "noon.pipelines.NoonPipeline": 300,
-#}
+ITEM_PIPELINES = {
+   "noon.pipelines.NoonPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
